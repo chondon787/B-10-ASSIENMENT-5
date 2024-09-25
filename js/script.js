@@ -48,9 +48,10 @@ let Adddonations=document.getElementById('donation-container');
         let donateTitle=e.target.parentNode.children[1].innerText;
         
         let currentDonate=parseFloat(donate);
+    
         let reducMoney=document.getElementById('reduc-money');
         let pars=parseFloat(reducMoney.innerText);
-        if( !isNaN(currentDonate) && currentDonate<pars ){
+        if( !isNaN(currentDonate) && currentDonate<pars && currentDonate > 0 ){
             my_modal_2.show()
             let div=document.createElement('div');
             div.classList='border-2 mb-5 p-5 rounded-2xl list-none';
@@ -76,7 +77,7 @@ let Adddonations=document.getElementById('donation-container');
         let strToNum=parseFloat(curretnBDT.innerText);  
         // let reducMoney=document.getElementById('reduc-money');
         // let pars=parseFloat(reducMoney.innerText);
-        if(!isNaN(currentDonate) && currentDonate<pars){
+        if(!isNaN(currentDonate) && currentDonate<pars && currentDonate > 0){
             
         reducMoney.innerText=pars-currentDonate;
         
